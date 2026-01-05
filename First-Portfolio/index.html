@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MACH BUNNENG | Portfolio</title>
+    <link rel="stylesheet" href="./CSS/style.css"/>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="website icon" type="image/png" href="./path/to/favicon.png" />
+</head>
+<body>
+    <div id="container" class="container">
+
+        <!-- Navigation Toggle Buttons -->
+         <div id="welcome-modal" class="modal-overlay">
+            <div class="modal-box">
+                <h1 class="modal-title">សូមស្វាគមន៍មកកាន់ Portfolio របស់ខ្ញុំ</h1>
+                
+                <div class="modal-body">
+                <p>សួស្តី! 👋 ខ្ញុំបាទឈ្មោះ <strong>ម៉ាច ប៊ុនណេង</strong> ជាអ្នកអភិវឌ្ឍន៍ Frontend និង Backend ដ៏ពេញចិត្តដែលចូលចិត្តបង្កើតគេហទំព័រដ៏ស្រស់ស្អាត។ រីករាយក្នុងការស្វែងយល់ពីគម្រោង និងជំនាញរបស់ខ្ញុំ។ សូមអរគុណសម្រាប់ការទស្សនា! 🚀</p>
+                </div>
+
+                <button id="close-modal" class="modal-btn">តោះ មើលតិចសិនទៅ</button>
+            </div>
+        </div>
+        <header class="head hidden">
+            <div class="logo-name">
+                <span class="logo-text-name">MACH BUNNENG</span>
+            </div>
+            
+            <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <button class="xmark" id="nav-toggle-close" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <nav id="main-nav"> 
+                <ul>
+                    <li><a href="#home"><i class="fa-regular fa-house"></i><span class="nav-text">Home</span></a></li> 
+                    <li><a href="#about"><i class="fa-solid fa-eye"></i><span class="nav-text">About</span></a></li>
+                    <li><a href="#about-skill"><i class="fa-solid fa-code"></i><span class="nav-text">Skills</span></a></li>
+                    <li><a href="#projects"><i class="fa-brands fa-r-project"></i><span class="nav-text">Projects</span></a></li>
+                    <li><a href="#services"><i class="fa-solid fa-briefcase"></i><span class="nav-text">Services</span></a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-envelope"></i><span class="nav-text">Contact</span></a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main class="body-container hidden" id="home">
+            <div class="text hidden">
+                <h1>Hello, I'm </h1>
+                <div class="loader-name" anim-text="Mach Bunneng">Mach Bunneng</div>
+                <h2>And I'm a <span class="h2h">Freelancer & Developer</span></h2>
+                <p class="description">
+                    Hi! I'm **Mach Bunneng**, a passionate front-end developer 
+                    specializing in translating design concepts into seamless and 
+                    interactive web experiences using **HTML, CSS, Javascript, 
+                    Tailwind framework, and Reactjs**.
+                </p>    
+                <a href="./image/Resume`s BunNeng.pdf" download id="CV">
+                    <button class="cv-button" id="download-btn">Download CV</button>
+                </a>
+                <a href="https://t.me/bunnengmach090524">
+                    <button class="tel-button" id="download-btn"><i class="fab fa-telegram tel"></i>Telegram</button>
+                </a>
+            </div>
+            <div class="images hidden">
+                <img src="./image/photo_2025-06-29_14-50-29.jpg" alt="Mach Bunneng Portrait" />
+            </div>
+        </main>
+
+        <main class="about-section hidden" id="about">
+            
+            <div class="about-image hidden">
+                <img src="./image/photo_2025-06-29_14-50-29.jpg" alt="Mach Bunneng" />
+            </div>
+
+            <div class="about-content hidden">
+                <h1 class="about-me">About Me</h1>
+                <p class="quote">
+                "Dedicated front-end developer with a passion for crafting engaging web experiences and building user-friendly interfaces."
+                </p>
+
+                <div class="about-text">
+                <p>
+                    I'm Mach Bunneng, a dedicated front-end developer. With expertise in HTML, CSS, JavaScript, Tailwind CSS, and React.js, I bring designs to life with precision and creativity.
+                </p>
+                <p>
+                    My journey in web development is driven by a commitment to continuous learning and innovation. I thrive on transforming ideas into functional, user-friendly websites.
+                </p>
+                </div>
+
+                <div class="contact-grid">
+                <div class="info-item-name"><strong>Name:</strong> Mach Bunneng</div>
+                <div class="info-item-national"><strong>Nationality:</strong> Khmer</div>
+                <div class="info-item-email"><strong>Email:</strong> bunnengmach090524@gmail.com</div>
+                <div class="info-item-phone"><strong>Phone:</strong> (+855) 96 7531 840</div>
+                </div>
+            </div>
+        </main>
+
+        <section class="skills-section hidden" id="about-skill">
+            <h2 class="my-skills">Technical Proficiency</h2>
+            
+            <div class="skills-container hidden">
+                <div class="skills-tabs hidden">   
+                    <div class="tab-item active" onclick="showSkill('frontend')">
+                        <div class="tab-icon"><i class="fas fa-code"></i></div>
+                        <span>Front-End</span>
+                    </div>
+                    <div class="tab-item" onclick="showSkill('backend')">
+                        <div class="tab-icon"><i class="fas fa-server"></i></div>
+                        <span>Back-End</span>
+                    </div>
+                    <div class="tab-item" onclick="showSkill('tools')">
+                        <div class="tab-icon"><i class="fas fa-tools"></i></div>
+                        <span>Tools</span>
+                    </div>
+                    <div class="tab-item" onclick="showSkill('softskills')">
+                        <div class="tab-icon"><i class="fas fa-users"></i></div>
+                        <span>Soft Skills</span>
+                    </div>
+                </div>
+
+                <div class="skills-display hidden">
+                    <h3 id="skill-title">Front-End</h3>
+                    <div id="skill-list" class="progress-container">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My project demo -->
+         <section class="skills-section hidden" id="projects">  
+            <h2 class="my-projects hidden">My littles Projects </h2>
+            <div class="skills-grid hidden">
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>Car Gras Shop Project</h3>
+                    <img class="image-skills" src="./image/Car-shop.png" alt="">
+                    <p>Semantic structure and modern styling with Flexbox/Grid.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <!-- <a href="https://first-portfolio-red.vercel.app/" class="btn-more" target="_blank">View More</a> -->
+                        <a href="http://first-portfolio-red.vercel.app/" 
+                        class="btn-more" target="_blank">View More</a>
+
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>Clothes Shop Project</h3>
+                    <img class="image-skills" src="./image/clothes--shop (1).png" alt="">
+                    <p>DOM manipulation, asynchronous programming, and API integration.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./Project-Clothes/Clothes-Shop.html" class="btn-more" target="_blank">View More</a>
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>Coffee Shop Project</h3>
+                    <img class="image-skills" src="./image/coffee-shop.png" alt="">
+                    <p>Building single-page applications with reusable components.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./Project-Coffee/Coffee-Shop.html" class="btn-more" target="_
+                        
+                        blank">View More</a>
+                    </div>
+                </div>  
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i>
+                    <h3>Skincare Project</h3>
+                    <img class="image-skills" src="./image/Screenshot 2025-12-28 011752.png" alt="">
+                    <p>Rapid UI development with utility-first CSS principles.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./Project-Skincare/Skincare-Shop.html" class="btn-more"target="_blank">View More</a>
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>Technology Shop</h3>
+                    <img class="image-skills" src="./image/TechMart.png" alt="">
+                    <p>Java use to build desktop, web, mobile.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./Project_Technology-Shop/Technology-Shop.html" class="btn-more" target="_blank">View More</a>
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>ACE Product</h3>
+                    <img class="image-skills" src="./image/coffee-shop.png" alt="">
+                    <p>C# used to build apps, websites, games,.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./ProjectACE/index.html" class="btn-more" target="_blank">View More</a>
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i>
+                    <h3>Parking System Project</h3>
+                    <img class="image-skills" src="./image/Parking-system.png" alt="">
+                    <p>C# used to build apps, websites, games, and cloud systems.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./Project-Parking/Parking-System.html" class="btn-more" target="_blank">View More</a>
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>Pos System Project</h3>
+                    <img class="image-skills" src="./image/Pos-System.png" alt="">
+                    <p>C# used to build apps, websites, games, and cloud systems.</p>
+                    <div class="group-btn hidden">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./Project-POSSystem/POS1.html" class="btn-more" target="_blank">View More</a>
+                    </div>
+                </div>
+                <div class="skill-card hidden">
+                    <i class="fab fa-html5"></i> 
+                    <h3>School Management</h3>
+                    <img class="image-skills" src="./image/School-Management.png" alt="">
+                    <p>C# used to build apps, websites, games, and cloud systems.</p>
+                    <div class="group-btn">
+                        <a href="" class="btn-more">View Code</a>
+                        <a href="./School-Management/RUPP-Management.html" class="btn-more" target="_blank">View More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section hidden" id="services">
+            <h2 class="my-services">My Services</h2>
+            <div class="services-grid hidden">
+                <div class="service-card hidden">
+                    <h3>Web Development</h3>
+                    <img class="image-skills" src="./image/web-development.jpg" alt="">
+                    <p>Building responsive and dynamic websites like modern.</p>
+                    <a href="" class="btn-more">See More</a>
+                </div>
+                <div class="service-card hidden">
+                    <h3>UI/UX Design</h3>
+                    <img class="image-skills" src="./image/home-care-service-app-design-tubik.jpg" alt="">
+                    <p>Creating user-friendly interfaces with a focus on user experience.</p>
+                    <a href="" class="btn-more">See More</a>
+                </div>
+                <div class="service-card hidden">
+                    <h3>Consultation</h3>
+                    <img class="image-skills" src="./image/7.4-Employee-Consultation.jpg" alt="">
+                    <p>Providing expert advice on web development best practices.</p>
+                    <a href="" class="btn-more">See More</a>
+                </div>
+            </div>
+        </section>
+
+        <!--  Contact Section -->
+        <!-- <section class="contact-section" id="contact">
+            <h2 class="contact-me">Contact Me</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button class="Submit" type="submit">Send Message</button>
+                <button class="Cancel" type="reset">Cancel</button>
+            </form>
+            <div class="information-contact">
+
+            </div>
+        </section> -->
+        <section class="contact-section hidden" id="contact">
+            <h2 class="contact-header">Get in touch</h2>
+
+            <div class="contact-container hidden">
+                <div class="information-contact hidden">
+                    <h3>Contact Information</h3>    
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Sangkat SteongMeanChey, Khan Mean Chey, Phnom Penh, Cambodia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>(+855) 096 7531 840</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>bunnengmach090524@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="form-container hidden">
+                <h3>Send a Message</h3>
+                <form class="contact-form hidden">
+                    <div class="input-group">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    </div>
+                    <input type="text" placeholder="Subject" required />
+                    <textarea placeholder="Your Message" rows="6" required></textarea>
+                    
+                    <div class="form-buttons">
+                        <button class="Submit" type="submit">Send Message</button>
+                        <button class="Cancel" type="reset">Cancel</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+            </section>
+    </div> 
+    <footer class="footer hidden">
+        <div class="contact-icon hidden">
+            <a href="https://www.facebook.com/share/17dBp24cTq/?mibextid=wwXIfr"        target="_blank"><i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/bunneng_mach/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://t.me/bunnengmach090524" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <!-- twitter -->
+            <a href="https://x.com/">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mach-bunneng-927b41209/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/seangsreyluch" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>  
+        <hr class="ruler" size="2" color="black" />
+        <p class="text-footer">© 2025 Made by Mach Bunneng. All rights reserved.
+            Designed and built with html,bootstrap,Tailwind CSS & js.</p>
+    </footer>
+    <script src="./JS/style-js.js"></script> 
+</body>
+</html>

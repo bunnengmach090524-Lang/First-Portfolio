@@ -1,0 +1,2129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Smooth transitions for hover effects */
+    transition: all 0.5s ease; 
+}
+
+/* Using a modern sans-serif font */
+body {
+    /* background-image: url(/image/L9L4N7H.jpg); */
+    /* background-image: url(/image/5f47b8e79f70ac7c7334ca3e_9tueczrl3hwewhn62zg3.jpeg); */
+    background-color: rgba(24, 55, 111, 0.92);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    min-height: 100vh;
+    left: 0;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    z-index: 1000;
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+.container {
+    padding: 0 5%; /* Relative padding */
+    max-width: 1200px; /* Max width for large screens */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* --- HEADER / NAVIGATION --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 0 5%;
+    z-index: 1000; /* Ensure header is on top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Logo Name */
+.logo-name .logo-text-name {
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 192, 192);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+/* Full screen background overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 25, 0.9); /* Dark semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it is on top of everything */
+}
+
+/* The popup box */
+.modal-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px); /* Glass effect */
+  backdrop-filter: brightness(0.8);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Title with gradient */
+.modal-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.5;
+}
+
+.modal-body {
+  color: #ccd6f6;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* The Purple Button */
+.modal-btn {
+  background: linear-gradient(135deg, #a78bfa 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.head {
+    background-color: #181818c5;
+    display: flex; /* <-- Already set */
+    justify-content: space-between; /* <-- Already set */
+    align-items: center;
+    height: 80px; /* Slightly taller header */
+    width: 100%;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.466); /* Subtle separator */
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00e0ff; /* Bright cyan/aqua for contrast */
+}
+
+.NAME {
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style-type: none;
+    margin-right: 0;
+}
+
+nav a {
+    font-size: 1.2rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Cool underline hover effect */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00e0ff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #00e0ff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* --- DEFAULT (FULL SCREEN / DESKTOP) STYLES --- */
+
+/* 1. Ensure the navigation is inline on desktop */
+.head nav {
+    display: block; 
+}
+.head .hamburger {
+    display: none; /* Hides the hamburger button on desktop */
+}
+
+/* 2. Full Screen: Hide Icon, Show Text */
+.head nav ul li a i {
+    display: none; /* Hides the icon on large screens */
+}
+.head nav ul li a .nav-text {
+    display: inline; /* Shows the text on large screens */
+}
+/* --- MOBILE STYLES (Hamburger Menu Implementation) --- */
+
+
+/* --- BODY / HERO SECTION --- */
+.body-container {
+    top: 81px;
+    left: 0;
+    width: 100%;
+    height: 516px;
+    padding: 0 5%;
+    /* z-index: 1000; */
+    background-color: #18287875;
+    border-radius: 14px;
+    padding: 40px;
+    margin-top: 81px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.text {
+    flex-basis: 55%; /* Take up more space for text */
+}
+
+.text .tel {
+    font-size: 1.2rem;
+    /* color: #00e0ff; */
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.loader-name {
+    font-size: 46px;
+    position: relative;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 0.1vw rgba(255, 255, 255, 0.4);
+}
+.loader-name::before{
+    position: absolute;
+    content: attr(anim-text);
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid #0dc1e9;
+    color: #00e0ff;
+    -webkit-text-stroke: 0.2vw #fff;
+    overflow: hidden;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    0% {
+        width: 70%;
+    }
+    50% {
+        width: 1%;
+    }
+    100% {
+        width: 70%;
+    }
+
+}
+
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.h2 {
+    color: #00e0ff;
+    font-weight: 700;
+}
+
+.description {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 0 0 5px #00e0ff;
+    border: #00e0ff 1px solid;
+    padding: 15px;  
+    border-radius: 10px;
+    line-height: 1.7;
+    box-shadow: 0 0 10px #00e0ff;
+    
+    margin-bottom: 30px;
+}
+
+/* --- IMAGE STYLES --- */
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 224, 255, 0.6); 
+    border-radius: 50%;
+    padding: 8px; /* Padding for the glow effect */
+    background: transparent;
+}
+
+.images::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 3px solid #00e0ff;
+    opacity: 0.5;
+    /* Subtle pulsating effect for extra cool factor */
+    animation: pulse 2s infinite alternate; 
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 10px #00e0ff;
+    }
+    to {
+        box-shadow: 0 0 30px #00e0ff;
+    }
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #1a1a1a; /* Border matching background for definition */
+}
+
+/* --- BUTTON STYLES --- */
+.cv-button {
+    padding: 12px 25px;
+    border-radius: 50px; /* More rounded pill shape */
+    background-color: #00e0ff;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid #00e0ff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.4);
+}
+
+.cv-button:hover {
+    background-color: transparent;
+    color: #00e0ff;
+    box-shadow: none;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.tel-button {
+    padding: 12px 25px;
+    border-radius: 50px; /* More rounded pill shape */
+    background-color: #00e0ff;
+    gap: 10px;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid #00e0ff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.4);
+}
+
+.tel-button i {
+    margin-right: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.4);
+}
+
+.tel-button:hover {
+    background-color: transparent;
+    color: #00e0ff;
+
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Container Layout */
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background-color: #271ea53f; /* Dark background like the image */
+    padding: 50px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-section .about-me {
+    font-size: 1.2rem;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    /* margin-bottom: 20px; */
+    margin-left: 200px;
+    color: #00e0ff;
+    border: #00e0ff 1px solid;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    text-align: center;
+}
+
+.about-me:hover {
+    color: #00e0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00e0ff;
+}
+/* Photo Styling */
+.about-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  border-bottom: 4px solid #f1c40f; /* Yellow accent from image 1 */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Content Area */
+.about-content {
+  flex: 1;
+  margin-left: 60px;
+}
+
+/* Quote styling (The italicized top part) */
+.quote {
+  font-style: italic;
+  color: #bdc3c7;
+  border-left: 3px solid #f1c40f;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ecf0f1;
+}
+
+/* Contact Details Grid (2 columns) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.info-item {
+  font-size: 0.95rem;
+}
+
+.info-item-name strong {    
+  color: #fff;
+  margin-right: 5px;
+}
+
+.info-item-national strong {
+  color: #fff;
+  margin-left: 50px;
+  margin-right: 5px;
+}
+
+.info-item-email strong {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.info-item-phone strong {
+  color: #fff;
+  margin-left: 50px;
+  margin-right: 5px;
+}
+/* -------------------------------------- */
+/* --- RESPONSIVENESS (Media Queries) --- */
+/* -------------------------------------- */
+    .container .head .hamburger {
+        display: none;
+    }
+
+    .container .head .xmark {
+        display: none;  
+    }
+
+@media (max-width: 1024px) {
+    /* --- HEADER & NAVIGATION LAYOUT ADJUSTMENTS --- */
+    .text {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 200px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 170px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 270px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 280px;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+    .head .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    
+    /* 1. HIDE the entire navigation menu by default on mobile */
+    .head nav {
+        position: absolute;
+        width: 500px;
+        display: block;     
+        left: 450px;
+    }
+    
+    /* 2. MAKE NAVIGATION VERTICAL */
+    .head nav ul {
+        gap: 10px;
+    }
+    .head nav ul li {
+        width: 100%; /* Full width list item */
+        border-bottom: 1px solid rgba(52, 50, 50, 0.349);
+    }
+    .head nav ul li a {
+        display: block;
+        text-align: center;
+    }
+
+    .head nav ul li a i {
+        font-size: 1.5rem;
+        display: inline-block; /* Shows the icon */
+        text-align: center;
+    }
+    .head nav ul li a .nav-text {
+        display: none; 
+    }
+
+    /* 4. STATE WHEN MENU IS OPEN */
+    .head nav ul li i {
+        display: block;
+    }
+    .head .name {
+        font-size: 2.2rem;
+    }  
+    .about-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+    .about-image {
+        margin-bottom: 30px;
+        margin-left: 250px;
+    }
+    .about-content {
+        margin-left: 0;
+    }
+
+    .about-content .about-me {
+        margin-left: 330px;
+    }
+
+    .contact-section .contact-header {
+        margin-left: 230px;
+    }
+
+}
+
+
+
+/* For Tablets and smaller desktops (Max width 992px) */
+@media (max-width: 992px) {
+    .body-container {
+        height: 850px;
+        /* margin-top: 50px; */
+        padding: 0 5%;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .text {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .images {
+        margin-bottom: 100px;
+    }
+    .my-projects {
+        margin-left: -890px;
+    }
+
+    .about-section {
+        margin-top: 50px;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+    .about-image {
+        margin-left: 250px;
+    }
+    .about-content {
+        margin-left: 0;
+    }
+
+}
+
+/* For Tablets and smaller desktops (Max width 992px) */
+@media (max-width: 945px) {
+    .body-container {
+        margin-top: 50px;
+        padding: 0 5%;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    /* 1. HIDE the entire navigation menu by default on mobile */
+    .head nav {
+        width: 400px;
+        position: absolute;
+        display: block;     
+    }
+    .head nav ul li i {
+        display: inline-block; /* Shows the icon */
+        width: 100%; /* Full width list item */
+        border-bottom: 1px solid rgba(52, 50, 50, 0.349);
+    }
+    
+    .head nav ul li a .nav-text {
+        display: none; 
+    }
+    .head .name {   
+        font-size: 2.2rem;
+    }  
+
+    .text {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .images {
+        /* margin: 0; */
+        padding: 10px;
+    }
+
+    .about-section {
+        margin-top: 50px;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+    .about-section .about-image {
+        margin-left: 200px;
+    }
+    .about-section .about-me {
+        margin-left: 280px;
+    }
+
+    .contact-section .contact-header {
+        margin-left: 170px;
+    }
+    .contact-form .Submit {
+        width: fit-content;
+        margin-left: 0;
+    }
+
+    .contact-form .form-buttons .Cancel {
+        margin-left: 20px;
+          
+    }
+
+}
+
+/* For Tablets and smaller desktops (Max width 992px) */
+@media (max-width: 870px) {
+    .body-container {
+        margin-top: 50px;
+        padding: 0 5%;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    /* 1. HIDE the entire navigation menu by default on mobile */
+    .head nav {
+        width: 350px;
+        position: absolute;
+        display: block;     
+    }
+    .head nav ul li i {
+        display: inline-block; /* Shows the icon */
+        width: 100%; /* Full width list item */
+        border-bottom: 1px solid rgba(52, 50, 50, 0.349);
+    }
+    
+    .head nav ul li a .nav-text {
+        display: none; 
+    }
+    .head .name {   
+        font-size: 2.2rem;
+    }  
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 160px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 120px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 200px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 210px;
+    }
+
+    .text {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form .Submit {
+        width: fit-content;
+        margin-left: 30px;
+    }
+
+    .contact-form .form-buttons .Cancel {
+        margin-left: 10px;
+    }
+
+}
+
+/* --- MOBILE STYLES (Using a Media Query) --- */
+
+@media (max-width: 810px) {
+    .head nav ul li a i {
+        display: inline-block; 
+        margin-right: 0px;
+    }
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 140px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left:90px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 180px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 190px;
+    }
+
+    .container .contact-section .Submit {
+        position: relative;
+        /* margin-right: 230px; */
+    }
+    .container .contact-section .Cancel {
+        position: relative;
+        /* margin-left: 150px; */
+    }
+    .container .head .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+    }
+    /* Default state for Xmark */
+    .container .head .xmark {
+        display: none; /* Hide xmark by default */
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+    }
+
+    /* Default state for Navigation */
+    .head nav {
+        width: 300px;
+        position: absolute;
+        display: none; /* Hide navigation by default */
+        left: 0px;   
+    }
+    .head nav {
+        width: 300px;
+        position: absolute;
+        display: none; 
+        left: 0px;   
+    }
+
+    /* State when menu is open */
+    .container .head nav.open {
+        display: block; /* Show navigation when it has the 'open' class */
+        position: absolute;
+        top: 80px; /* Adjust this value as needed */
+        z-index: 100; /* Ensure it's above other content */
+    }
+
+    .head nav ul {
+        gap: 10px;
+        display: flex;
+        flex-direction: column; /* Stack vertically */
+        background-color: #000000cf;
+        margin-right: 0px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .head nav ul li {
+        width: 100%; /* Full width list item */
+        /* border-bottom: 1px solid rgba(52, 50, 50, 0.349); */
+    }
+    
+    .head nav ul li a .nav-text {
+        display: none; 
+    }
+    .head .name {   
+        font-size: 2.2rem;
+    }  
+
+    .text {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section {
+        /* margin-left: -50px; */
+        margin-top: 50px;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+    .about-section .about-image {
+        margin-left: 165px;
+    }
+    .about-section .about-me {
+        margin-left: 250px;
+    }
+
+    .contact-section .contact-header {
+        margin-left: 150px;
+    }
+
+    .contact-form .Submit {
+        width: fit-content;
+        margin-left: 0;  
+    }
+    .contact-form .form-buttons .Cancel {
+        margin-left: 10px;  
+    }
+}
+
+@media (max-width: 768px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 120px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 70px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 160px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 170px;
+    }
+
+    .container .contact-section .Submit {
+        position: relative;
+        /* margin-right: 230px; */
+    }
+    .container .contact-section .Cancel {
+        position: relative;
+        /* margin-left: 150px; */
+    }
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 145px;
+    }
+    .about-section .about-me {
+        margin-left: 220px;
+    }
+
+    .contact-section .contact-header {
+        margin-left: 130px;
+    }
+
+    .contact-section .Submit {
+        width: fit-content;
+        margin-left: 40px;  
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 100px;  
+    }
+}
+
+@media (max-width: 680px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 90px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 30px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 140px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 140px;
+    }
+
+    .container .contact-section .Submit {
+        position: relative;
+        margin-right: -50px;
+    }
+    .container .contact-section .Cancel {
+        position: relative;
+        /* margin-left: 150px; */
+    }
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 105px;
+    }
+    .about-section .about-me {
+        margin-left: 195px;
+    }
+
+    .contact-section .contact-header {
+        margin-left: 130px;
+    }
+
+    .contact-section .Submit {
+        width: fit-content;
+        margin-left: 40px;  
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 100px;  
+    }
+
+}
+/* Apply these styles when the screen width is 768px or smaller (Mobile) */
+@media (max-width: 614px) {
+    
+    /* 1. SHOW THE ICON on small screens */
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+    /* 2. HIDE THE TEXT LABEL on small screens */
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 60px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 120px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 120px;
+    }
+
+    .container .contact-section .Submit {
+        position: relative;
+        margin-left: 50px;
+    }
+    .container .contact-section .Cancel {
+        position: relative;
+        margin-left: 100px;
+    }
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 80px;
+    }
+    .about-section .about-me {
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 580px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+
+    .head > .hamburger {
+        margin-right: 100px;
+    }
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 100px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 60px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 70px;
+    }
+
+    .container .contact-section .Submit {
+        position: relative;
+        margin-right: 230px;
+    }
+    .container .contact-section .Cancel {
+        position: relative;
+        margin-left: 150px;
+    }
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .contact-section .contact-header {
+        margin-left: 90px;
+    }
+    .contact-section .Submit {
+        width: 140px;
+        margin-left: 10px;  
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 250px;
+        bottom: 36px;
+    }
+}
+
+@media (max-width: 514px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+
+    .head > .hamburger {
+        margin-right: 100px;
+    }
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 20px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 60px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 70px;
+    }
+
+    .container .contact-section .Submit {
+        position: relative;
+        margin-right: 230px;
+    }
+    .container .contact-section .Cancel {
+        position: relative;
+        margin-left: 150px;
+    }
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 30px;
+    }
+
+    .about-section .about-me {
+        margin-left: 120px;
+    }
+    .contact-section .contact-header {
+        margin-left: 90px;
+    }
+    .contact-section .Submit {
+        width: 140px;
+        left: 0;  
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 210px;
+        bottom: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+    .head > .logo-name > .logo-text-name {
+        font-size: 20px;
+    }
+     .container .head .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+        margin-right: 50px;
+    }
+    /* Default state for Xmark */
+    .container .head .xmark {
+        display: none; /* Hide xmark by default */
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+        margin-right: 50px;
+    }
+
+    .container > .head > .xmark.open {
+        display: block;
+    }
+
+    
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 20px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 60px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 70px;
+    }
+
+    
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 0;
+    }
+
+    .about-section .about-me {
+        margin-left: 100px;
+        font-size: 15px;
+    }
+    .contact-section .contact-header {
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    .contact-section .form-buttons  .Submit {
+        width: 140px;
+        margin-left: 0;
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 170px;
+        bottom: 36px;
+    }
+
+    .body-container {
+        height: fit-content;
+    }
+
+    .body-container > .loader-name {
+        font-size: 5px;
+    }
+    .about-section > .about-content {
+        height: fit-content;
+        width: fit-content;
+        font-size: 10px;
+    }
+
+    .footer > .contact-icon {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .footer > .ruler {
+        margin-left: 120px;
+    }
+
+    .container .modal-overlay {
+        width: fit-content;
+    }
+    .container .head .logo-name .logo-text-name,.loader-name {
+        font-size: 31px;
+    }
+}
+
+@media (max-width: 428px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+    .head > .logo-name > .logo-text-name {
+        font-size: 20px;
+    }
+     .container .head .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+        margin-right: 50px;
+    }
+    /* Default state for Xmark */
+    .container .head .xmark {
+        display: none; /* Hide xmark by default */
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+        margin-right: 50px;
+    }
+
+    .container > .head > .xmark.open {
+        display: block;
+    }
+
+    
+
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 20px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 5px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 60px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 70px;
+    }
+
+    
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 0;
+    }
+
+    .about-section .about-me {
+        margin-left: 100px;
+        font-size: 15px;
+    }
+    .contact-section .contact-header {
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    .contact-section .form-buttons  .Submit {
+        width: 140px;
+        margin-left: 0;
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 170px;
+        bottom: 36px;
+    }
+
+    .body-container {
+        height: fit-content;
+    }
+
+    .body-container > .loader-name {
+        font-size: 5px;
+    }
+    .about-section > .about-content {
+        height: fit-content;
+        width: fit-content;
+        font-size: 10px;
+    }
+
+    .footer > .contact-icon {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .footer > .ruler {
+        margin-left: 120px;
+    }
+
+    .container .modal-overlay {
+        width: fit-content;
+    }
+    .container .head .logo-name .logo-text-name,.loader-name {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 410px) {
+    .head nav ul li a i {
+        display: inline; /* <-- NEW: Overrides the default and shows the icon */
+        margin-right: 0;
+    }
+    
+     .container .head .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+        margin-right: 50px;
+    }
+    /* Default state for Xmark */
+    .container .head .xmark {
+        display: none; /* Hide xmark by default */
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.9rem;
+        cursor: pointer;
+        margin-right: 50px;
+    }
+
+    .container > .head > .xmark.open {
+        display: block;
+    }
+
+    .body-container .tel-button {
+        margin-top: 10px;
+    }
+    .container .skills-section .my-projects {
+        position: relative;
+        margin-left: 35px;
+        font-size: 25px;
+    }
+    .container .skills-section .my-skills    {
+        position: relative;
+        margin-left: 20px;
+        font-size: 25px;
+    }
+
+    .container .services-section .my-services {
+        position: relative;
+        margin-left: 65px;
+        font-size: 25px;
+    }
+
+    .container .contact-section .contact-me {
+        position: relative;
+        margin-left: 70px;
+    }
+
+    
+    /* 2. HIDE THE TEXT LABEL on small screens */
+    .head nav ul li a .nav-text {
+        display: none;
+    }
+    
+    /* 3. Adjust spacing for the list items */
+    .head nav ul li {
+        padding: 10px 5px; 
+    }
+
+    .about-section .about-image {
+        margin-left: 0;
+    }
+
+    .about-section .about-me {
+        margin-left: 90px;
+        font-size: 15px;
+    }
+    
+    .contact-section .contact-header {
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    .contact-section .form-buttons  .Submit {
+        width: 140px;
+        margin-left: 0;
+    }
+    .contact-section .form-buttons .Cancel {
+        margin-left: 170px;
+        bottom: 36px;
+    }
+
+    .body-container {
+        height: fit-content;
+    }
+
+    .body-container > .loader-name {
+        font-size: 5px;
+    }
+    .about-section > .about-content {
+        height: fit-content;
+        width: fit-content;
+        font-size: 10px;
+    }
+
+    .footer > .contact-icon {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .footer > .ruler {
+        margin-left: 120px;
+    }
+
+    .container .modal-overlay {
+        width: fit-content;
+    }
+    .container .head .logo-name .logo-text-name,.loader-name {
+        font-size: 20px;
+    }
+}
+
+/* --- SKILLS SECTION STYLES --- */
+.skills-section {
+    background-color: #19238f78;
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin-top: 50px;
+    border-radius: 20px;
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+.skills-section .my-projects {
+    width: fit-content;
+    margin-left: 290px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00e0ff;
+    margin-bottom: 50px;
+    font-style: italic;
+    border: #00e0ff 1px solid;
+    padding: 20px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00e0ff;
+}
+
+.my-projects:hover {
+    color: #00e0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00e0ff;
+}   
+.my-projects strong {
+    color: #00e0ff;
+
+}
+
+.skills-section h2 strong {
+    color: #00e0ff;
+}
+
+.skills-grid {
+    display: grid;
+    /* Create a responsive grid: 4 columns on desktop, minimum size 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #28295fc7; /* Slightly lighter dark background */
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 3px solid #00e0ff;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    background-color: #073f939d;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: #00e0ff;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skill-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+.group-btn {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.btn-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 12px;
+    background-color: #00e0ff;
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid #00e0ff;
+    box-shadow: 0 5px 15px rgba(0, 224, 255, 0.4);
+    transition: all 0.3s ease;
+}
+.btn-more:hover {
+    background-color: transparent;
+    color: #00e0ff;
+    border: 2px solid #00e0ff;
+    box-shadow: none;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.image-skills {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 0 10px #00e0ff;
+    border-radius: 10%;
+    border: #00e0ff 2px solid;
+    margin-bottom: 15px;
+
+}
+
+.my-skills{
+    width: fit-content;
+    margin-left: 235px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00e0ff;
+    margin-bottom: 50px;
+    font-style: italic;
+    border: #00e0ff 1px solid;
+    padding: 20px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00e0ff;
+}
+
+.my-skills:hover {
+    color: #00e0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00e0ff;
+}
+
+
+/* my education & skills */
+.skills-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    max-width: 1000px;
+}
+
+/* Tabs Styling */
+.skills-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+}
+
+.tab-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #1a73e8;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+.tab-item.active {
+    background: #0e4182bb;
+    box-shadow: 0 0 15px #1a73e8;
+}
+
+.tab-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.tab-item:hover {
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00e0ff;
+}
+
+/* Progress Section Styling */
+.skills-display {
+    flex: 1;
+    border: 1px solid #1a73e8;
+    border-radius: 10px;
+    padding: 25px;
+    background: rgba(17, 57, 136, 0.5);
+}
+
+.skill-row {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #222222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00e0ff;
+    box-shadow: 0 0 10px #00e0ff;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Add Responsive adjustments for the skills grid */
+@media (max-width: 550px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column on small mobiles */
+    }
+}
+
+/* --- JS ANIMATION STYLES (for fade-in) --- */
+
+/* Initially hide the sections */
+.body-container, 
+.skills-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Class added by JavaScript when the element is in view */
+.body-container.visible, 
+.skills-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* services section */
+
+.services-section {
+    border-radius: 20px;
+    margin-top: 30px;
+    background-color: #1d177975;
+    padding: 20px 5%;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    text-align: center;
+}
+.services-section .my-services {
+    width: fit-content;
+    margin-left: 335px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00e0ff;
+    margin-bottom: 50px;
+    font-style: italic;
+    border: #00e0ff 1px solid;
+    padding: 25px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00e0ff;
+}
+.my-services:hover {
+    color: #00e0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00e0ff;
+}
+.my-services strong {
+    color: #00e0ff;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+}
+.service-card {
+    background-color: #28295fc7;
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 3px solid #00e0ff;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.service-card:hover {
+    background-color: #073f939d;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
+}
+.service-card i {
+    font-size: 3rem;
+    color: #00e0ff;
+    margin-bottom: 15px;
+}
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.service-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+/* contact section */
+.contact-section {
+  padding: 60px 10%;
+  margin-top: 30px;
+  border-radius: 30px;
+  color: white;
+  background-color: #1c56b387; /* Based on the last image background */
+}
+
+.contact-header {
+    width: fit-content;
+    margin-left: 335px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00e0ff;
+    margin-bottom: 50px;
+    font-style: italic;
+    border: #00e0ff 1px solid;
+    padding: 25px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00e0ff;
+}
+.contact-header:hover{
+    background-color: #04daf74c;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Left Column Styling */
+.information-contact {
+  flex: 1;
+}
+
+.information-contact h3 {
+    width: fit-content;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-shadow: 0 0 10px #00e0ff;
+    font-style: italic;
+    border: #00e0ff 1px solid;
+    padding: 25px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    color: #fff;
+    font-weight: 700;
+}
+
+.information-contact h3:hover{
+    background-color: #04daf74c;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  color: #ffffff; /* Dark text for white background */
+}
+
+.info-item i {
+  color: #00b7ff;
+  font-size: 1.5rem;
+}
+
+/* Right Column Styling */
+.form-container {
+  flex: 1.5;
+}
+
+.form-container h3 {
+    width: fit-content;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-shadow: 0 0 10px #00e0ff;
+    font-style: italic;
+    border: #00e0ff 1px solid;
+    padding: 25px;  
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00e0ff;
+    color: #fff;
+    font-weight: 700;
+}
+
+.form-container h3:hover{
+    background-color: #04daf74c;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 224, 255, 0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  background-color: #595b6059; /* Dark inputs like image */
+  border:  none;
+  /* outline: none; */
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.Submit {
+    background-color: #0140ff;
+    color: rgb(255, 255, 255);
+    border: none;
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(22, 67, 228, 0.568);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.Submit:hover {
+  background-color: #0f097b;
+  transform: translateY(-10px);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+.contact-form .Cancel {
+    background-color: #ffffff1f;
+    color: rgb(255, 255, 255);
+    outline: red;
+    padding: 10px 20px;
+    margin-left: 100px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.contact-form .Cancel:hover {
+    background-color: red;
+    color: #ffffffe0;
+    box-shadow: none;
+    transform: translateY(-10px); /* Subtle lift on hover */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 0 5%;
+    }
+}
+
+.footer {
+    background-color: #1e0a4682;
+    text-align: center;
+    width: 100%;
+    height: 180px;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(122, 122, 122, 0.466); /* Subtle separator */
+}
+.contact-icon {
+    width: 100%;
+    color: #00e0ff;
+    margin: 0 15px;
+    font-size: 1.6rem;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.contact-icon a {
+    text-align: center;
+    /* gap: 10px; */
+    cursor: pointer;
+    border: #141313cf 1px solid;
+    padding: 14px 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0b3f94;
+    transition: ease-in-out 0.3s;
+}
+
+.contact-icon i:hover {
+    color: rgba(0, 255, 255, 0.689);
+    /* transform: scaleY(5); */
+    transform: translateY(-10px);
+    /* box-shadow: 0 0 10px #00e0ff; */
+}
+.footer hr {
+    margin-left: 400px;
+    width: 40%;
+    /* margin: 10px auto; */
+    border: 0.5px solid rgba(122, 122, 122, 0.466);
+}
+.footer .text-footer {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 1rem;
+}
