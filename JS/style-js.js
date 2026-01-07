@@ -146,9 +146,9 @@ const skillData = {
     backend: {
         title: "Back-End",
         skills: [
-            { name: "Java", level: "85%" },
-            { name: "C#", level: "80%" },
-            { name: "Node.js", level: "75%" }
+            { name: "Java", level: "55%" },
+            { name: "C#", level: "50%" },
+            { name: "Node.js", level: "65%" }
         ]
     },
     tools: {
