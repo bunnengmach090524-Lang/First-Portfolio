@@ -2130,7 +2130,7 @@ img {
     background: #00e0ff;
     box-shadow: 0 0 10px #00e0ff;
     /* Use animation instead of transition */
-    animation: fill-bar 1s ease-out forwards;
+    animation: fill-bar 1.5s ease-out forwards;
 }
 
 @keyframes fill-bar {
