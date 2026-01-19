@@ -197,6 +197,7 @@ nav a:hover::after {
 }
 .head nav ul li a .nav-text {
     display: inline; /* Shows the text on large screens */
+    transition: all 0.5s ease-in-out;
 }
 /* --- MOBILE STYLES (Hamburger Menu Implementation) --- */
 
@@ -244,7 +245,7 @@ h1 {
     color: transparent;
     -webkit-text-stroke: 0.1vw rgba(255, 255, 255, 0.4);
 }
-.loader-name::before{
+.loader-name::before {
     position: absolute;
     content: attr(anim-text);
     height: 100%;
@@ -253,7 +254,10 @@ h1 {
     color: #00e0ff;
     -webkit-text-stroke: 0.2vw #fff;
     overflow: hidden;
-    animation: animate 3s linear infinite;
+    animation: animate 4s linear infinite;
+    
+    /* ADD THIS LINE */
+    white-space: nowrap; 
 }
 @keyframes animate {
     0% {
@@ -2115,11 +2119,23 @@ img {
     overflow: hidden;
 }
 
-.progress-fill {
+/* .progress-fill {
     height: 100%;
     background: #00e0ff;
     box-shadow: 0 0 10px #00e0ff;
     transition: width 0.5s ease-in-out;
+} */
+.progress-fill {
+    height: 100%;
+    background: #00e0ff;
+    box-shadow: 0 0 10px #00e0ff;
+    /* Use animation instead of transition */
+    animation: fill-bar 1s ease-out forwards;
+}
+
+@keyframes fill-bar {
+    from { width: 0%; }
+    /* The "to" is handled by the inline style in your JS */
 }
 
 /* Add Responsive adjustments for the skills grid */

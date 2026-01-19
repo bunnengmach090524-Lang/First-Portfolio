@@ -172,13 +172,15 @@ const skillData = {
 function showSkill(category) {
     // 1. Update Active Tab UI
     document.querySelectorAll('.tab-item').forEach(tab => tab.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    if(event) event.currentTarget.classList.add('active');
 
-    // 2. Update Title and Content
+    // 2. Update Title
     const data = skillData[category];
     document.getElementById('skill-title').innerText = data.title;
     
     const list = document.getElementById('skill-list');
+    
+    // 3. Render HTML with 0% width first to "prime" the animation
     list.innerHTML = data.skills.map(s => `
         <div class="skill-row">
             <div class="skill-info">
@@ -186,11 +188,41 @@ function showSkill(category) {
                 <span>${s.level}</span>
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: ${s.level}"></div>
+                <div class="progress-fill" style="width: 0%"></div>
             </div>
         </div>
     `).join('');
+
+    // 4. Trigger the animation after a tiny delay
+    setTimeout(() => {
+        const fills = list.querySelectorAll('.progress-fill');
+        fills.forEach((fill, index) => {
+            fill.style.width = data.skills[index].level;
+        });
+    }, 50); // 50ms is enough for the browser to register the 0% state
 }
+// function showSkill(category) {
+//     // 1. Update Active Tab UI
+//     document.querySelectorAll('.tab-item').forEach(tab => tab.classList.remove('active'));
+//     event.currentTarget.classList.add('active');
+
+//     // 2. Update Title and Content
+//     const data = skillData[category];
+//     document.getElementById('skill-title').innerText = data.title;
+    
+//     const list = document.getElementById('skill-list');
+//     list.innerHTML = data.skills.map(s => `
+//         <div class="skill-row">
+//             <div class="skill-info">
+//                 <span>${s.name}</span>
+//                 <span>${s.level}</span>
+//             </div>
+//             <div class="progress-bar">
+//                 <div class="progress-fill" style="width: ${s.level}"></div>
+//             </div>
+//         </div>
+//     `).join('');
+// }
 
 // Initialize with Frontend on load
 window.onload = () => showSkill('frontend');
